@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "dev": "parkfinity-dev",
+    "prod": "parkfinity-test"
+  }
+}
