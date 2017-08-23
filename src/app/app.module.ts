@@ -1,7 +1,18 @@
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
-import { MaterialModule, MdButtonModule, MdDialog, MdIconRegistry, MdInputModule, MdMenuModule, MdToolbarModule, MdTooltipModule } from '@angular/material';
+import {
+  MaterialModule,
+  MdButtonModule,
+  MdDatepickerModule,
+  MdDialog,
+  MdIconRegistry,
+  MdInputModule,
+  MdMenuModule,
+  MdNativeDateModule,
+  MdToolbarModule,
+  MdTooltipModule,
+} from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from 'angularfire2';
@@ -17,7 +28,9 @@ import { LoginComponent } from './auth/login';
 import { FeedbackDialogComponent } from './feedback-dialog/feedback-dialog.component';
 import { HelpComponent } from './help/help.component';
 import { HomeComponent } from './home/home';
+import { LeaseMyBayComponent } from './lease-my-bay/lease-my-bay.component';
 import { PageNotFoundComponent } from './page.not.found';
+import { RentComponent } from './rent/rent.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -37,6 +50,8 @@ export const firebaseConfig = {
     HomeComponent,
     FeedbackDialogComponent,
     PageNotFoundComponent,
+    LeaseMyBayComponent,
+    RentComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +68,8 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    MdDatepickerModule,
+    MdNativeDateModule,
   ],
   providers: [
     AuthGuard,
