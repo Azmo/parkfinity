@@ -22,6 +22,7 @@ const appRoutes: Routes = [
         data: { title: 'Parkfinity' },
     }, {
         path: 'Lease',
+        canActivate: [AuthGuard],
         component: LeaseMyBayComponent,
         data: { title: 'Lease My Bay' },
     }, {
