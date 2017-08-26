@@ -21,11 +21,11 @@
     <md-card-title>Bay is available on following days:</md-card-title>
   </md-card-header>
   <md-card-content>
-    <md-checkbox [ngModel]="(bay|async)?.mon" (ngModelChange)="bay.update({mon: $event})" name="mon">Monday</md-checkbox>
-    <md-checkbox [ngModel]="(bay|async)?.tue" (ngModelChange)="bay.update({tue: $event})" name="tue">Tuesday</md-checkbox>
-    <md-checkbox [ngModel]="(bay|async)?.wed" (ngModelChange)="bay.update({wed: $event})" name="wed">Wednesday</md-checkbox>
-    <md-checkbox [ngModel]="(bay|async)?.thu" (ngModelChange)="bay.update({thu: $event})" name="thu">Thursday</md-checkbox>
-    <md-checkbox [ngModel]="(bay|async)?.fri" (ngModelChange)="bay.update({fri: $event})" name="mon">Friday</md-checkbox>
+    <md-checkbox [ngModel]="(bay|async)?.Mon" (ngModelChange)="bay.update({Mon: $event})" name="Mon">Monday</md-checkbox>
+    <md-checkbox [ngModel]="(bay|async)?.Tue" (ngModelChange)="bay.update({Tue: $event})" name="Tue">Tuesday</md-checkbox>
+    <md-checkbox [ngModel]="(bay|async)?.Wed" (ngModelChange)="bay.update({Wed: $event})" name="Wed">Wednesday</md-checkbox>
+    <md-checkbox [ngModel]="(bay|async)?.Thu" (ngModelChange)="bay.update({Thu: $event})" name="Thu">Thursday</md-checkbox>
+    <md-checkbox [ngModel]="(bay|async)?.Fri" (ngModelChange)="bay.update({Fri: $event})" name="Fri">Friday</md-checkbox>
   </md-card-content>
 </md-card>
 <app-bank-account></app-bank-account>

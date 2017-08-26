@@ -27,6 +27,7 @@ export class RentComponent implements OnInit {
 
   ngOnInit() {
     this.routerStateSnapshot = this.router.routerState.snapshot;
+    this.chosenDate = new Date();
   }
 
   // ToDo refactor
@@ -42,10 +43,15 @@ export class RentComponent implements OnInit {
     if (this.isUserLoggedIn()) {
       this.bays = this.db.list(`/bays/`, {
         query: {
-          orderByChild: 'mon',
+          orderByChild: moment(this.chosenDate).format('ddd'),
           equalTo: true,
         },
       }).map((_bays) => _bays.filter((bay) => !bay.booked[moment(this.chosenDate).format('YYMMDD')]));
     }
+  }
+
+  book(bay: any) {
+    const booking = moment(this.chosenDate).format('YYMMDD');
+    this.db.object(`/bays/${bay.$key}/booked/${booking}`).set(true);
   }
 }

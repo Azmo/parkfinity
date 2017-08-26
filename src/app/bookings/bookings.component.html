@@ -1,0 +1,10 @@
+<md-card>
+  <md-card-header>
+    <md-card-title>Bookings</md-card-title>
+  </md-card-header>
+  <md-card-content>
+    <div *ngFor="let booking of (bookings | async)">
+      {{booking}}
+    </div>
+  </md-card-content>
+</md-card>
