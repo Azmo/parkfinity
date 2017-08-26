@@ -5,24 +5,27 @@
   <md-card-content>
     <div fxLayout="column">
       <md-input-container>
-        <input mdInput placeholder="Address">
+        <input mdInput placeholder="Address" type="text" [ngModel]="(bay|async)?.address" (ngModelChange)="bay.update({address: $event})"
+          name="address">
       </md-input-container>
       <md-input-container>
-        <textarea mdInput placeholder="Description" rows="4"></textarea>
+        <textarea mdInput placeholder="Description" rows="4" [ngModel]="(bay|async)?.description" (ngModelChange)="bay.update({description: $event})"
+          name="description">
+        </textarea>
       </md-input-container>
     </div>
   </md-card-content>
 </md-card>
 <md-card>
   <md-card-header>
-    <md-card-title>Bay is available on following days</md-card-title>
+    <md-card-title>Bay is available on following days:</md-card-title>
   </md-card-header>
   <md-card-content>
-    <md-checkbox>Monday</md-checkbox>
-    <md-checkbox>Tuesday</md-checkbox>
-    <md-checkbox>Wednesday</md-checkbox>
-    <md-checkbox>Thursday</md-checkbox>
-    <md-checkbox>Friday</md-checkbox>
+    <md-checkbox [ngModel]="(bay|async)?.mon" (ngModelChange)="bay.update({mon: $event})" name="mon">Monday</md-checkbox>
+    <md-checkbox [ngModel]="(bay|async)?.tue" (ngModelChange)="bay.update({tue: $event})" name="tue">Tuesday</md-checkbox>
+    <md-checkbox [ngModel]="(bay|async)?.wed" (ngModelChange)="bay.update({wed: $event})" name="wed">Wednesday</md-checkbox>
+    <md-checkbox [ngModel]="(bay|async)?.thu" (ngModelChange)="bay.update({thu: $event})" name="thu">Thursday</md-checkbox>
+    <md-checkbox [ngModel]="(bay|async)?.fri" (ngModelChange)="bay.update({fri: $event})" name="mon">Friday</md-checkbox>
   </md-card-content>
 </md-card>
 <app-bank-account></app-bank-account>
