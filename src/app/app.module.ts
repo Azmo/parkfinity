@@ -25,6 +25,7 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
 import { LoginComponent } from './auth/login';
+import { BankAccountComponent } from './bank-account/bank-account.component';
 import { FeedbackDialogComponent } from './feedback-dialog/feedback-dialog.component';
 import { HelpComponent } from './help/help.component';
 import { HomeComponent } from './home/home';
@@ -52,6 +53,7 @@ export const firebaseConfig = {
     PageNotFoundComponent,
     LeaseMyBayComponent,
     RentComponent,
+    BankAccountComponent,
   ],
   imports: [
     BrowserModule,
