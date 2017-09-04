@@ -94,6 +94,7 @@ export class AppComponent implements OnInit {
 
   loginFacebook() {
     const provider = new firebase.auth.FacebookAuthProvider();
+    provider.addScope('email');
     this.afAuth.auth.signInWithPopup(provider);
   }
 
