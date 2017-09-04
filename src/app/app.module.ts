@@ -36,12 +36,12 @@ import { RentComponent } from './rent/rent.component';
 
 // Must export the config
 export const firebaseConfig = {
-  apiKey: 'AIzaSyCCQorC3iT3_vPSHN_WAhrCuMs9w7zxHoE',
-  authDomain: 'parkfinity-dev.firebaseapp.com',
-  databaseURL: 'https://parkfinity-dev.firebaseio.com',
-  projectId: 'parkfinity-dev',
-  storageBucket: 'parkfinity-dev.appspot.com',
-  messagingSenderId: '90634997789',
+  apiKey: 'AIzaSyD66yjWURXlHnep9WdKNOZl3B_0IUfOIY4',
+  authDomain: 'parkfinity-prod.firebaseapp.com',
+  databaseURL: 'https://parkfinity-prod.firebaseio.com',
+  projectId: 'parkfinity-prod',
+  storageBucket: 'parkfinity-prod.appspot.com',
+  messagingSenderId: '60132710348',
 };
 
 @NgModule({

@@ -1,6 +1,6 @@
 {
   "projects": {
     "dev": "parkfinity-dev",
-    "prod": "parkfinity-test"
+    "prod": "parkfinity-prod"
   }
 }
